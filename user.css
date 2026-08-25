@@ -1,0 +1,524 @@
+/* Reset */
+
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap);#app[data-v-5fdf2371] {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html {
+    margin: 0;
+    font-family: Roboto,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #242424;
+    text-align: left;
+}
+
+li {
+    list-style: none;
+}
+
+.flex.flex1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding: 50px 0;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    text-align: center;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    line-height: 2;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    transition: opacity 300ms ease;
+}
+
+
+
+.section:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.selection__title {
+    margin-bottom: 20px;
+    font-size: 42px;
+}
+
+
+.row {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 12px;
+    margin: 0 auto;
+}
+
+.link__hover-effect {
+    position: relative;
+}
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect--white:after {
+    background-color: white;
+}
+
+.link__hover-effect:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;  
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+nav,
+.header {
+    visibility: visible;
+    transition: all 600ms;
+    max-width: 100%;
+    display: flex;
+}
+
+figure {
+    margin: 0 0 1rem;
+}
+
+img {
+    align-self: center;
+    max-width: 100%;    
+    border-style: none;
+}
+
+.box {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  border: 1px solid #242424;
+}
+
+/* Header */
+
+header{
+    background:black;
+    color:white;
+    padding:30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:50px;
+}
+
+.input__wrapper {
+    width: 50%;
+    color: #fff;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    font-size: 16px;
+    position: relative;
+}
+
+.anime__watching--img--container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 16px;
+    border-radius: 100%;
+    max-width: 900px;
+    justify-content: center;
+}
+
+.anime__watching--img {
+    width: 100%;
+    animation: fade-in 1200ms 800ms backwards;
+}
+
+/* Hero */
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 100%;
+    padding: 150px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #444;
+    color: white;
+}
+
+button.not-loading.spc_btn {
+    border: 1px solid #3c29aa;
+    background-color: #3c29aa;
+    box-shadow: 7px 7px 14px rgba(134, 93, 204, .3);
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button {
+    padding:10px 10px;
+    border:none;
+    background: #3c29aa;
+    color:white;
+    cursor:pointer;
+}
+
+
+.search-bar {
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    outline: none;
+    padding: 5px 15px;
+    width: 100%;
+    padding-left: 10px;
+    max-width: 800px;
+}
+
+.search-bar input {
+    background: transparent; 
+    width: 100%;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 25px 20px; 
+    font-size: 24px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    border: 1px solid #0a1f44;
+}
+
+input:focus {
+    box-shadow: 0 0 0 1px #3c29aa;
+}
+
+.spc_btn {
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 50px;
+    border-radius: 30px;
+    background-color: #3c29aa;
+    box-shadow: 7px 7px 14px rgba(134, 93, 204, .3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.spc_btn:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+.spc_btn:hover {
+    transform: scale(1.05);
+}
+
+.spc_btn:focus {
+    outline: none;
+}
+
+#searchIcon {
+    display: block;
+    font-size: 35px;
+}
+
+.spinner {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #ffffff;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.spinner.loading {
+    display: inline-block;
+}
+
+#searchIcon.hidden {
+    display: none;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Cards */
+
+.title,
+.purple {
+    color: #3c29aa;
+    font-size: 42px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.anime-list{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:40px;
+}
+
+.card{
+    width:200px;
+    background:white;
+    border:1px solid #ccc;
+    text-align:center;
+    padding:10px;
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000;
+}
+
+.footer__social--list {
+    display: flex;
+    max-width: 500px;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 28px;
+    padding: 0 24px;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8% 0;
+}
+
+.footer__social--link,
+.footer__copyright,
+.footer__anchor {
+    position: relative;    
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer__anchor:hover,
+.back-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(60, 41, 170, 0.4);
+}
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .anime__watching--img--container {
+        max-width: 550px;
+    }
+
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    header {
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 550px;
+
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+
+    /* IMAGE */
+
+    .anime__watching--img--container {
+        width: 90%;
+        max-width: 400px;
+    }
+
+
+    /* SEARCH */
+
+    .search-bar {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .search-bar input {
+        width: 100%;
+
+        font-size: 16px;
+
+        padding: 14px 18px;
+    }
+
+    .spc_btn {
+        width: 55px;
+        height: 55px;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+}
