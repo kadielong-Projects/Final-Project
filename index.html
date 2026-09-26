@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/afaccdd0f1.js" crossorigin="anonymous"></script>
+    <title>Anime Hub</title>
+    <link rel="stylesheet" href="user.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Anime Hub</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#trending" class="
+                        link__hover-effect--white
+                        nav__link--anchor 
+                        link__hover-effect"
+                    >Trending</a>
+                </li>
+                <li>
+                    <a href="#contact" class="
+                        link__hover-effect--white
+                        nav__link--anchor 
+                        link__hover-effect
+                    ">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero flex flex1 landing-page">
+        <h1>Welcome to Anime Hub!</h1>
+            <figure class="anime__watching--img--container">
+                <img src="./assets/anime-watching.svg" class="anime__watching--img" alt="Watching anime">
+            </figure>
+            <p>Discover your favorite anime series.</p>
+        <div class="search-bar">
+            <input class="input__wrapper" 
+                type="text" id="searchInput" 
+                name="keyword" 
+                placeholder="Search by Genre or Name....">
+            <a href="anime.html" class="nav__link--anchor"></a>
+            <button class="not-loading spc_btn" 
+                type="button" 
+                onclick="searchAnime()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                
+            </button>
+        </div>
+    </section>
+
+    <section id="trending">
+        <div class="container">
+            <div class="row">
+               <h1 class="section__title">
+                Most <span class="purple">Trending</span> Animes of 2026
+               </h1> 
+            </div>
+       </div>
+    </section>
+
+    <section class="anime-list">
+        <div class="card">
+            <img src="./assets/solo-leveling.jpg" alt="Solo Leveling">
+            <h3>Solo Leveling</h3>
+            <p class="anime__genre">Action • Adventure</p>
+        </div>
+
+        <div class="card">
+            <img src="./assets/daemons.jpg" alt="Daemons of the Shadow Realm">
+            <h3>Daemons of the Shadow Realm</h3>
+            <p class="anime__genre">Action • Fantasy</p>
+        </div>
+
+        <div class="card">
+            <img src="./assets/rezero.jpg" alt="Re:Zero">
+            <h3>Re:Zero</h3>
+            <p class="anime__genre">Mystery • Psychological</p>
+        </div>
+
+        <div class="card">
+            <img src="./assets/apothecary.jpg" alt="Apothecary">
+            <h3>Apothecary Diaries Season 2</h3>
+            <p class="anime__genre">Action • Adventure</p>
+        </div>
+    </section>
+
+    <section id="new-releases">
+        <div class="container">
+            <div class="row">
+               <h1 class="section__title">
+                Most <span class="purple">New Released</span> Animes of 2026
+               </h1> 
+            </div>
+       </div>
+    </section>
+
+    <div class="anime-list">
+        <div class="card">
+            <figure class="new__img--wrapper">
+                <img src="./assets/bleach.jpg" alt="Bleach: Thousand-Year Blood War">
+            </figure>
+            <h3>Bleach: Thousand-Year Blood War</h3>
+            </div>
+        <div class="card">
+            <figure class="new__img--wrapper">
+                <img src="./assets/Jaadugar.jpg" alt="Jaadugarr: A Witch in Mongolia">
+            </figure>
+            <h3>Jaadugarr: A Witch in Mongolia</h3>
+        </div>
+        <div class="card">
+            <figure class="new__img--wrapper">
+                <img src="./assets/black.jpg" alt="Black Torch">
+            </figure>
+            <h3>Black Torch</h3>
+        </div>
+        <div class="card">
+            <figure class="new__img--wrapper">
+                <img src="./assets/tokyo.jpg" alt="Tokyo Revengers: War of the Three Titans">
+            </figure>
+            <h3>Tokyo Revengers: War of the Three Titans</h3>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__links">
+       
+            <a href="" class="back-to-top
+            footer__social--link
+            link__hover-effect">
+            ↑ Top
+            </a> 
+            <a href="#contact" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white">
+            Contact
+            </a>
+        </div>
+        <p class="footer__copyright">
+        © 2026 Anime Hub
+        </p>
+    </footer>
+<script src="script.js"></script>     
+</body>
+</html>

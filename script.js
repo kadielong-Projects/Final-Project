@@ -4,61 +4,61 @@ const anime = [
         name: "Solo Leveling",
         rating: 9.1,
         image: "./assets/solo-leveling.jpg",
-        genre: "Action • Adventure"
+        genre: "Action • Adventure",
     },
     {
         name: "Demon Slayer",
         rating: 8.7,
         image: "./assets/demon.jpg",
-        genre: "Action • Adventure"
+        genre: "Action • Adventure",
     },
     {
         name: "Jujutsu Kaisen",
         rating: 8.9,
         image: "assets/jjk.jpg",
-        genre: "Action • Adventure"
+        genre: "Action • Adventure",
     },
     {
         name: "Tokyo Revengers",
         rating: 8.5,
         image: "./assets/tokyo.jpg",
-        genre: "Action • Adventure"
+        genre: "Action • Adventure",
     },
     {
         name: "Bleach",
         rating: 9.0,
         image: "./assets/bleach.jpg",
-        genre: "Action • Adventure"
+        genre: "Action • Adventure",
     },
     {
         name: "Re:Zero",
         rating: 8.6,
         image: "./assets/rezero.jpg",
-        genre: "Mystery • Psychological"
+        genre: "Mystery • Psychological",
     },
     {
         name: "Apothecary Diaries",
         rating: 8.4,
         image: "./assets/apothecary.jpg",
-        genre: "Mystery • Psychological"    
+        genre: "Mystery • Psychological",   
     },
     {
         name: "Daemons of the Shadow Realm",
         rating: 8.3,
         image: "./assets/daemons.jpg",
-        genre: "Action • Fantasy"
+        genre: "Action • Fantasy",
     },
     {
         name: "Jaadugaar: A Witch in Mongolia",
         rating: 8.2,
         image: "./assets/jaadugar.jpg",
-        genre: "Action • Fantasy"
+        genre: "Action • Fantasy",
     },
     {
         name: "Black Torch",
         rating: 8.1,
         image: "./assets/black.jpg",
-        genre: "Action • Fantasy"
+        genre: "Action • Fantasy",
     },
 ];
 
@@ -97,6 +97,23 @@ function displayAnime(animeArray) {
         animeList.appendChild(animeCard);
     });
 }
+
+
+function searchAnime() {
+
+    const searchInput = document.getElementById("searchInput");
+
+    const searchText = searchInput.value.trim();
+
+    if (searchText === "") {
+        alert("Please enter an anime name.");
+        return;
+    }
+
+    window.location.href =
+        "anime.html?search=" + encodeURIComponent(searchText);
+}
+
 
 function updateAnime() {
     let results = anime;
