@@ -146,9 +146,14 @@ searchInput.addEventListener("input", function() {
     updateAnime();
 });
 
-sortRating.addEventListener("change", function() {
-    updateAnime();
+if (animeList && searchInput && sortRating) {
+    const params = new URLSearchParams(window.location.search);
+    searchInput.value = params.get("search") || "";
 
-});
+    searchInput.addEventListener("input", updateAnime);
+    sortRating.addEventListener("change", updateAnime);
+
+    updateAnime();
+}
 
 displayAnime(anime);
