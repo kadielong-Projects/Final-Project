@@ -37,17 +37,13 @@
                 <img src="./assets/anime-watching.svg" class="anime__watching--img" alt="anime watching">
             </figure>
             <p>Discover your favorite anime series.</p>
+
         <div class="search-bar">
-            <input class="input__wrapper" 
-                type="text" id="searchInput" 
-                name="keyword" 
-                placeholder="Search by Genre or Name....">
-            <a href="anime.html" class="nav__link--anchor"></a>
-            <button class="not-loading spc_btn" 
-                type="button" 
-                onclick="searchAnime()">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                
+            <input type="text" id="searchInput" placeholder="Search by Genre or Name...">
+
+            <button id="searchButton" onclick="searchAnime()">
+                <span id="searchText"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <span id="spinner" class="spinner"></span>
             </button>
         </div>
     </section>

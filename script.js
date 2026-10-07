@@ -68,6 +68,8 @@ const searchInput = document.getElementById("searchInput");
 
 const sortRating = document.getElementById("sortRating");
 
+const sortAnime = document.getElementById("sortAnime");
+
 function displayAnime(animeArray) {
     animeList.innerHTML = "";
     animeArray.forEach(function(anime) {
@@ -100,9 +102,7 @@ function displayAnime(animeArray) {
 
 
 function searchAnime() {
-
     const searchInput = document.getElementById("searchInput");
-
     const searchText = searchInput.value.trim();
 
     if (searchText === "") {
@@ -110,15 +110,20 @@ function searchAnime() {
         return;
     }
 
-    window.location.href =
-        "anime.html?search=" + encodeURIComponent(searchText);
-}
+    document.getElementById("searchText").style.display = "none";
+    document.getElementById("spinner").style.display = "inline-block";
 
+    setTimeout(function() {
+        window.location.href =
+            "anime.html?search=" + encodeURIComponent(searchText);
+    }, 1000);
+}
 
 function updateAnime() {
     let results = anime;
 
     const searchText = searchInput.value.toLowerCase();
+
     if (searchText !== "") {
         results = anime.filter(function(anime) {
             return anime.name
@@ -127,18 +132,34 @@ function updateAnime() {
         });
     }
 
-    if (sortRating.value === "low") {
+    // A - Z
+    if (sortAnime.value === "az") {
+        results.sort(function(a, b) {
+            return a.name.localeCompare(b.name);
+        });
+    }
+
+    // Z - A
+    if (sortAnime.value === "za") {
+        results.sort(function(a, b) {
+            return b.name.localeCompare(a.name);
+        });
+    }
+
+    // Rating: Low to High
+    if (sortAnime.value === "low") {
         results.sort(function(a, b) {
             return a.rating - b.rating;
         });
     }
 
-    if (sortRating.value === "high") {
+    // Rating: High to Low
+    if (sortAnime.value === "high") {
         results.sort(function(a, b) {
             return b.rating - a.rating;
         });
-
     }
+
     displayAnime(results);
 }
 
@@ -146,14 +167,13 @@ searchInput.addEventListener("input", function() {
     updateAnime();
 });
 
-if (animeList && searchInput && sortRating) {
+if (animeList && searchInput && sortAnime) {
     const params = new URLSearchParams(window.location.search);
+
     searchInput.value = params.get("search") || "";
 
     searchInput.addEventListener("input", updateAnime);
-    sortRating.addEventListener("change", updateAnime);
+    sortAnime.addEventListener("change", updateAnime);
 
     updateAnime();
 }
-
-displayAnime(anime);

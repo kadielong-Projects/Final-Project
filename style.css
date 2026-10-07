@@ -225,44 +225,124 @@ FOOTER
   padding: 0 8px;
 }
 
-/* 
-   MOBILE
- */
+/* =========================
+   TABLETS
+========================= */
 
-@media (max-width: 700px) {
-    header {
-        flex-direction: column;
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .search-bar {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .anime-list {
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding: 20px;
     }
 
-    nav {
-        gap: 15px;
+}
+
+
+/* =========================
+   PHONES
+========================= */
+
+@media (max-width: 480px) {
+
+    /* Header */
+
+    header {
+        padding: 15px;
     }
 
-    .hero h2 {
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
         font-size: 28px;
     }
 
+    .hero p {
+        font-size: 14px;
+    }
+
+
+    /* Search */
+
     .search-bar {
+        width: 100%;
+        display: flex;
         flex-direction: column;
+        gap: 10px;
     }
 
     .search-bar input {
         width: 100%;
-        max-width: 400px;
+        box-sizing: border-box;
     }
 
-    .search-bar select {
+    .search-bar button {
         width: 100%;
-        max-width: 400px;
+    }
+
+
+    /* Sort */
+
+    #sortAnime {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+
+    /* Anime cards */
+
+    .anime-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
     }
 
     .anime-card {
-        width: 160px;
+        width: 100%;
     }
 
-    .anime__img--wrapper {
-        height: 230px;
+    .anime__img {
+        width: 100%;
+        height: auto;
     }
+
+
+    /* Footer */
+
+    footer {
+        padding: 20px 15px;
+        text-align: center;
+    }
+
 }
